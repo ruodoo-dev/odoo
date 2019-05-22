@@ -12,3 +12,9 @@ class TestUi(odoo.tests.HttpCase):
             "odoo.__DEBUG__.services['web_tour.tour'].tours.portal_load_homepage.ready",
             login="portal"
         )
+
+@odoo.tests.tagged('l10nall', '-standard')
+class TestThatFails(odoo.tests.TransactionCase):
+    def test_that_fails(self):
+        self.assertTrue(False, 'Ahah, nice failure !')
+
